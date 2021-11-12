@@ -25,8 +25,9 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
     COND_CODE_1(IS_ENABLED(CONFIG_ZMK_BLE), (ZMK_ENDPOINT_BLE), (ZMK_ENDPOINT_USB))
 
 static enum zmk_endpoint current_endpoint = DEFAULT_ENDPOINT;
+/* Used if multiple endpoints are ready */
 static enum zmk_endpoint preferred_endpoint =
-    ZMK_ENDPOINT_USB; /* Used if multiple endpoints are ready */
+    COND_CODE_1(IS_ENABLED(CONFIG_ZMK_PREFER_BLE), (ZMK_ENDPOINT_BLE), (ZMK_ENDPOINT_USB));
 
 static void update_current_endpoint();
 

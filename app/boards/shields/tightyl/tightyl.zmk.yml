@@ -1,6 +1,6 @@
 file_format: "1"
-id: ergotravel
-name: Ergotravel
+id: tightyl
+name: Tightyl
 type: shield
 url: https://github.com/omkbd/ErgoDash
 requires: [pro_micro]
@@ -9,5 +9,5 @@ features:
   - keys
   - display
 siblings:
-  - ergotravel_left
-  - ergotravel_right
+  - tightyl_left
+  - tightyl_right

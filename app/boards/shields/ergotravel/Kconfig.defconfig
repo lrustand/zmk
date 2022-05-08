@@ -11,6 +11,12 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
 
 endif
 
+if SHIELD_ERGOTRAVEL_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Ergotravel_right"
+endif
+
 if SHIELD_ERGOTRAVEL_LEFT || SHIELD_ERGOTRAVEL_RIGHT
 
 config ZMK_SPLIT
